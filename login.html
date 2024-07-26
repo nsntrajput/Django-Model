@@ -1,0 +1,68 @@
+<!-- dataapp/templates/dataapp/login.html -->
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f414;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: skyblue;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px black;
+            width: 300px;
+            padding: 20px;
+            animation: appear 0.5s ease-in-out;
+        }
+
+        @keyframes appear {
+            from {opacity: 0; transform: translateY(50px)}
+            to {opacity: 1; transform: translateY(0px)}
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: red;
+            background-color: #5C6BC0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+    </div>
+</body>
+</html>
+
+</div>
+{% endblock %}

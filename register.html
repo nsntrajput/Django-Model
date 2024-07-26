@@ -1,0 +1,15 @@
+<!-- dataapp/templates/dataapp/register.html -->
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">
+    <h1>Create Account</h1>
+    <p>Use your email for registration.</p>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">SIGN UP</button>
+    </form>
+</div>
+{% endblock %}
